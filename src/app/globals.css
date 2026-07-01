@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-surface-0: #08090c;
+  --color-surface-1: #0d0f13;
+  --color-surface-2: #131519;
+  --color-surface-3: #191c21;
+  --color-border-subtle: #22252b;
+  --color-border-default: #2a2d34;
+
+  --color-brand-50: #f2f0ff;
+  --color-brand-400: #9d8cff;
+  --color-brand-500: #7c6bf0;
+  --color-brand-600: #6552e0;
+
+  --animate-fade-up: fade-up 0.5s ease both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-feature-settings: "cv11", "ss01";
+}
+
+* {
+  border-color: var(--color-border-subtle);
+}
+
+::selection {
+  background-color: rgba(124, 107, 240, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2a2d34;
+  border-radius: 999px;
+  border: 2px solid #08090c;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.bg-radial-fade {
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(124, 107, 240, 0.18), transparent 70%);
+}
